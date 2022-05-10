@@ -35,7 +35,7 @@ function draw() {
   }
 
   background(0);
-  for (var i = 0; i < 50; i++) {
+  for (var i = 0; i < (width/height)*50; i++) {
     stroke(255);
     point(random(width), random(height));
     noStroke();
