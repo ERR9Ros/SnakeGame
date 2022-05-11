@@ -58,7 +58,6 @@ function draw() {
         object.shift();
         object.push(new fruit());
         length += 10;
-        print("Trail:" + length);
         score += 1;
         if (score > highScore) {
           storeItem("highScore", score);

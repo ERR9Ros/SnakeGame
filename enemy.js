@@ -23,8 +23,6 @@ class enemy {
       if (dtp <= this.r + player[0].r) {
         trail.shift();
         length -= 1;
-
-        print("attack");
       }
     }
   }
