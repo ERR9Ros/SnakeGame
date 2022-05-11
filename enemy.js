@@ -12,7 +12,7 @@ class enemy {
   }
   display() {
     noStroke();
-    fill(255, 0, 0, 80);
+    fill(255, 0, 0, 90);
     ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
   }
 
