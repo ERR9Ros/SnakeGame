@@ -121,6 +121,7 @@ function keyPressed() {
     for (var i = 0; i < 5; i++) {
       ghost.push(new enemy());
     }
+    ghostPause = true;
   }
   if (gameRun == true && keyCode == 27) {
     gameRun = false;
