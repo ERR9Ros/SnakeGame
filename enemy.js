@@ -28,12 +28,14 @@ class enemy {
   }
   move() {
     //ghost should not move until player does
-    for (let p of player) {
-      let dtp = p5.Vector.dist(this.pos, player[0].pos);
-      if (dtp < width / 2) {
-        this.vel = createVector(p.pos.x - this.pos.x, p.pos.y - this.pos.y);
-        this.vel.limit(this.speed);
-        this.pos.add(this.vel);
+    if (ghostPause == false) {
+      for (let p of player) {
+        let dtp = p5.Vector.dist(this.pos, player[0].pos);
+        if (dtp < width / 2) {
+          this.vel = createVector(p.pos.x - this.pos.x, p.pos.y - this.pos.y);
+          this.vel.limit(this.speed);
+          this.pos.add(this.vel);
+        }
       }
     }
   }
