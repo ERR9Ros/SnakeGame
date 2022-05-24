@@ -1,16 +1,16 @@
 let trail = [];
-let death = 0;
 
 class snake {
   constructor() {
     this.pos = createVector(width / 2, height / 2);
     this.r = 10;
+    this.width = this.r * 2;
     this.vel = createVector(0, 0);
   }
   display() {
     noStroke();
     fill(0, 150, 0);
-    ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
+    ellipse(this.pos.x, this.pos.y, this.width, this.width);
   }
   move() {
     this.pos.add(this.vel);

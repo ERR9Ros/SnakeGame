@@ -77,15 +77,16 @@ function draw() {
     }
 
     //UI stuffs
-    rectMode(CENTER);
+    rectMode(CENTER, TOP);
     fill(255);
-    rect(width / 2, 10, width, 20);
+    rect(width / 2, 0, width, 20);
     fill(0);
     textSize(15);
-    text("Score:" + score, 0, 15);
-    text("HighScore:" + highScore, (width / 4) * 3, 15);
-    text("Health:" + length, (width / 4) * 2, 15);
-    text("Ghosts: " + enemies, width / 5, 15);
+    textAlign(LEFT, TOP);
+    text("Score:" + score, 0, 0);
+    text("HighScore:" + highScore, width * 0.75, 0);
+    text("Health:" + length, width / 2, 0);
+    text("Ghosts: " + enemies, width * 0.2, 0);
     if (length == 0) {
       rectMode(CENTER);
       rect(width / 2, height / 2, 220, 220);
@@ -112,17 +113,18 @@ function draw() {
 function keyPressed() {
   for (let p of player) {
     p.control();
-  }
-  if (length == 0 && keyCode == 32) {
-    player.push(new snake());
-    score = 0;
-    length = 50;
-    ghost = [];
-    for (var i = 0; i < 5; i++) {
-      ghost.push(new enemy());
+    if (length == 0 && keyCode == 32) {
+      p.push(new snake());
+      score = 0;
+      length = 50;
+      ghost = [];
+      for (var i = 0; i < 5; i++) {
+        ghost.push(new enemy());
+      }
+      ghostPause = true;
     }
-    ghostPause = true;
   }
+
   if (gameRun == true && keyCode == 27) {
     gameRun = false;
     player = [];

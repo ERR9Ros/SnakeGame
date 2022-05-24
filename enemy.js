@@ -15,7 +15,6 @@ class enemy {
     fill(255, 0, 0);
     ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
   }
-
   attack() {
     if (length > 0) {
       let dtp = p5.Vector.dist(this.pos, player[0].pos);
@@ -27,7 +26,6 @@ class enemy {
     }
   }
   move() {
-    //ghost should not move until player does
     if (ghostPause == false) {
       for (let p of player) {
         let dtp = p5.Vector.dist(this.pos, player[0].pos);

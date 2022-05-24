@@ -2,8 +2,8 @@ class fruit {
   constructor() {
     this.width = 15;
     this.pos = createVector(
-      random(this.width / 2, width - this.width / 2),
-      random(20 + this.width / 2, height - this.width / 2)
+      random(this.width, width - this.width),
+      random(20 + this.width, height - this.width)
     );
   }
   display() {
