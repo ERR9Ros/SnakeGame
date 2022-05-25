@@ -77,9 +77,9 @@ function draw() {
     }
 
     //UI stuffs
-    rectMode(CENTER, TOP);
+    rectMode(CORNER);
     fill(255);
-    rect(width / 2, 0, width, 40);
+    rect(0, 0, width*2, 20);
     fill(0);
     textSize(15);
     textAlign(LEFT, TOP);
