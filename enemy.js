@@ -7,7 +7,7 @@ class enemy {
     );
 
     this.vel = createVector(0, 0);
-    this.speed = random(0.4, 0.7);
+    this.speed = random(0.4, 0.9);
     this.pause = createVector(0, 0);
   }
   display() {

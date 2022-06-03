@@ -16,10 +16,12 @@ class button {
   }
   click() {
     if (
-      mouseX => this.pos.x - this.width / 2 && mouseX <= this.pos.x + this.width / 2
+      (mouseX) =>
+        this.pos.x - this.width / 2 && mouseX <= this.pos.x + this.width / 2
     ) {
       if (
-        mouseY => this.pos.x - this.height / 2 && mouseY <= this.pos.x + this.height / 2
+        (mouseY) =>
+          this.pos.x - this.height / 2 && mouseY <= this.pos.x + this.height / 2
       ) {
         if (gameRun == false) {
           player.push(new snake());
