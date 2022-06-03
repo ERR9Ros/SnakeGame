@@ -1,3 +1,5 @@
-"dependencies": {
-  "Lartu/p5.clickable":
+{
+  "dependencies": {
+    "Lartu/p5.clickable":
+  }
 }
