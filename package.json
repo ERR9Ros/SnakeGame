@@ -1,0 +1,7 @@
+{
+    "name": "SnakeGame",
+    "private": false,
+    "dependencies": {
+        "p5.clickable": "^1.2"
+    },
+}
