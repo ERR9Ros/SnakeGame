@@ -1,0 +1,6 @@
+[submodule "/home/err9r/Documents/SnakeGame/p5.clickable"]
+	path = /home/err9r/Documents/SnakeGame/p5.clickable
+	url = https://github.com/Lartu/p5.clickable.git
+[submodule "/home/err9r/Documents/SnakeGame/p5.play"]
+	path = /home/err9r/Documents/SnakeGame/p5.play
+	url = https://github.com/molleindustria/p5.play.git
