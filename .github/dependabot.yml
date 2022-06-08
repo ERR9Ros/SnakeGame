@@ -1,6 +1,6 @@
 version: 2
 updates:
  - package-ecosystem: "npm"
-    directory: "/p5.play"
-    schedule:
+directory: "/p5.play"
+schedule:
       interval: "daily"
