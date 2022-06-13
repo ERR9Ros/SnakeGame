@@ -76,7 +76,7 @@ function draw() {
       g.attack();
     }
 
-    //UI stuffs
+    //UI stuffs (Fix this mess)
     rectMode(CORNER);
     fill(255);
     rect(0, -10, width*2, 25);
