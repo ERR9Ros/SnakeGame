@@ -18,21 +18,21 @@ class snake {
   control() {
     if (keyCode == UP_ARROW || keyCode == 87) {
       this.vel.x = 0;
-      this.vel.y = -1;
+      this.vel.y = -1.5;
       ghostPause = false;
     }
     if (keyCode == DOWN_ARROW || keyCode == 83) {
       this.vel.x = 0;
-      this.vel.y = 1;
+      this.vel.y = 1.5;
       ghostPause = false;
     }
     if (keyCode == LEFT_ARROW || keyCode == 65) {
-      this.vel.x = -1;
+      this.vel.x = -1.5;
       this.vel.y = 0;
       ghostPause = false;
     }
     if (keyCode == RIGHT_ARROW || keyCode == 68) {
-      this.vel.x = 1;
+      this.vel.x = 1.5;
       this.vel.y = 0;
       ghostPause = false;
     }
