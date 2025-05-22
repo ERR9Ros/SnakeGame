@@ -76,7 +76,7 @@ function draw() {
       g.attack();
     }
 
-    //UI stuffs (Fix this mess)
+    //UI stuffs
     rectMode(CORNER);
     fill(255);
     rect(0, -10, width * 2, 25);
@@ -87,7 +87,7 @@ function draw() {
     text("HighScore:" + highScore, width * 0.75, 0);
     text("Health:" + length, width / 2, 0);
     text("Ghosts: " + enemies, width * 0.2, 0);
-    if (length == 0) {
+    if (length == 0 && keyCode != 27) {
       rectMode(CENTER);
       rect(width / 2, height / 2, 220, 220);
       fill(255);
@@ -95,7 +95,7 @@ function draw() {
       fill(0);
       text("Score:" + score, width / 2 - 70, height / 2);
       text("HighScore:" + highScore, width / 2 - 70, height / 2 + 20);
-      text("Hit SPACE to play again", width / 2 - 80, height / 2 + 50);
+      text("Hit ESC to play again", width / 2 - 80, height / 2 + 50);
       textSize(20);
       text("GAME OVER!", width / 2 - 70, height / 2 - 25);
     }
@@ -113,25 +113,17 @@ function draw() {
 function keyPressed() {
   for (let p of player) {
     p.control();
-    if (length == 0 && keyCode == 32) {
-      p.push(new snake());
-      score = 0;
-      length = 50;
-      ghost = [];
-      for (var i = 0; i < 5; i++) {
-        ghost.push(new enemy());
-      }
-      ghostPause = true;
-    }
   }
 
-  if (gameRun == true && keyCode == 27) {
-    gameRun = false;
-    player = [];
-    object = [];
-    ghost = [];
-    trail = [];
+  if (length == 0 && keyCode == 27) {
+    player.push(new snake());
     score = 0;
+    length = 50;
+    ghost = [];
+    gameRun = true;
+    for (var i = 0; i < 5; i++) {
+      ghost.push(new enemy());
+    }
     ghostPause = true;
   }
 }
